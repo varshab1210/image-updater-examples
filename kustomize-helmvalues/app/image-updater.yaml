@@ -7,18 +7,17 @@ spec:
   applicationRefs:
     - namePattern: "kustomize-helmvalues"
       images:
-        - alias: "nginx"
-          imageName: "docker.io/bitnamilegacy/nginx:1.27.x"
+        - alias: "nginx-unprivileged"
+          imageName: "docker.io/nginxinc/nginx-unprivileged:1.31.x"
           commonUpdateSettings:
             updateStrategy: "semver"
             forceUpdate: false
           manifestTargets:
-            helm:
-              name: "image.repository"
-              tag: "image.tag"
+            kustomize:
+              name: "docker.io/nginxinc/nginx-unprivileged"
   writeBackConfig:
     method: "git:secret:openshift-gitops/git-creds"
     gitConfig:
       repository: "https://github.com/varshab1210/image-updater-examples.git"
       branch: "test-2"
-      writeBackTarget: "helmvalues:/kustomize-helmvalues/source2/values.yaml"
+      writeBackTarget: "kustomization:/kustomization-write-target/source"
