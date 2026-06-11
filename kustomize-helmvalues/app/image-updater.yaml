@@ -20,5 +20,6 @@ spec:
     gitConfig:
       repository: "https://github.com/varshab1210/image-updater-examples.git"
       branch: "test-2"
+      writeBackTarget: "kustomization:/kustomization-write-target/source"
       pullRequest:
         github: {}

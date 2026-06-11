@@ -1,3 +1,0 @@
-kustomize:
-  images:
-  - docker.io/nginxinc/nginx-unprivileged=docker.io/nginxinc/nginx-unprivileged:1.31.1
