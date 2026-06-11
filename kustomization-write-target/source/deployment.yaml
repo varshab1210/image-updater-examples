@@ -10,7 +10,7 @@ spec:
         runAsNonRoot: true
       containers:
       - name: nginx
-        image: docker.io/nginxinc/nginx-unprivileged:1.31.1
+        image: docker.io/nginxinc/nginx-unprivileged:1.31.0
         securityContext:
           allowPrivilegeEscalation: false
           capabilities:
