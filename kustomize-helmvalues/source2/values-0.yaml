@@ -6,8 +6,8 @@ global:
 
 image:
   registry: docker.io
-  repository: nginxinc/nginx-unprivileged
-  tag: 1.31.1
+  repository: bitnamilegacy/nginx
+  tag: 1.27.1
 
 podSecurityContext:
   fsGroup: null
