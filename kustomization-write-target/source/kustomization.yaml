@@ -5,3 +5,7 @@ labels:
     includeTemplates: true
     pairs:
       app: kustomization-write-target
+images:
+  - name: docker.io/nginxinc/nginx-unprivileged
+    newName: docker.io/nginxinc/nginx-unprivileged
+    newTag: 1.31.1
