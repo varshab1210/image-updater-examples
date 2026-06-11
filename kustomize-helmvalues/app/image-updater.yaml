@@ -2,13 +2,13 @@ apiVersion: argocd-image-updater.argoproj.io/v1alpha1
 kind: ImageUpdater
 metadata:
   name: kustomize-helmvalues
-  namespace: argocd
+  namespace: openshift-gitops
 spec:
   applicationRefs:
     - namePattern: "kustomize-helmvalues"
       images:
         - alias: "nginx"
-          imageName: "docker.io/bitnamilegacy/nginx:1.27.x"
+          imageName: "docker.io/nginxinc/nginx-unprivileged:1.31.x"
           commonUpdateSettings:
             updateStrategy: "semver"
             forceUpdate: false
@@ -17,8 +17,8 @@ spec:
               name: "image.repository"
               tag: "image.tag"
   writeBackConfig:
-    method: "git:secret:argocd/git-creds"
+    method: "git:secret:openshift-gitops/git-creds"
     gitConfig:
-      repository: "https://github.com/chengfang/image-updater-examples.git"
-      branch: "main"
+      repository: "https://github.com/varshab1210/image-updater-examples.git"
+      branch: "test-2"
       writeBackTarget: "helmvalues:/kustomize-helmvalues/source2/values.yaml"

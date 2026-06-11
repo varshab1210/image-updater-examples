@@ -1,8 +1,15 @@
-# See https://argocd-image-updater.readthedocs.io/en/latest/basics/update-methods/#git-write-back-target
+# values-0.yaml
+global:
+  compatibility:
+    openshift:
+      adaptSecurityContext: auto
+
 image:
-  registry: ""
-  repository: docker.io/bitnamilegacy/nginx
-  tag: 1.27.1  # 1.27.1 is not the latest, and is eligible for update
-env:
-  - name: ENVIRONMENT
-    value: production
+  registry: docker.io
+  repository: nginxinc/nginx-unprivileged
+  tag: 1.31.1
+
+podSecurityContext:
+  fsGroup: null
+containerSecurityContext:
+  runAsUser: null
