@@ -19,7 +19,7 @@ spec:
     method: "git:secret:openshift-gitops/git-creds"
     gitConfig:
       repository: "https://github.com/varshab1210/image-updater-examples.git"
-      branch: "test-2"
+      branch: "pull-secret"
       writeBackTarget: "kustomization:/kustomization-write-target/source"
       pullRequest:
         github: {}
