@@ -8,13 +8,13 @@ spec:
     - namePattern: "kustomize-helmvalues"
       images:
         - alias: "nginx-unprivileged"
-          imageName: "docker.io/nginxinc/nginx-unprivileged:1.31.x"
+          imageName: "quay.io/varsha/nginx-unprivileged:1.31.x"
           commonUpdateSettings:
             updateStrategy: "semver"
             forceUpdate: false
           manifestTargets:
             kustomize:
-              name: "docker.io/nginxinc/nginx-unprivileged"
+              name: "quay.io/varsha/nginx-unprivileged"
   writeBackConfig:
     method: "git:secret:openshift-gitops/git-creds"
     gitConfig:
