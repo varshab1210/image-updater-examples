@@ -6,6 +6,8 @@ spec:
   replicas: 1
   template:
     spec:
+      imagePullSecrets:
+        - name: quay-pull-secret
       securityContext:
         runAsNonRoot: true
       containers:

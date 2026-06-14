@@ -12,6 +12,7 @@ spec:
           commonUpdateSettings:
             updateStrategy: "semver"
             forceUpdate: false
+            pullSecret: "pullsecret:openshift-gitops/quay-pull-secret"
           manifestTargets:
             kustomize:
               name: "quay.io/varsha/nginx-unprivileged"
