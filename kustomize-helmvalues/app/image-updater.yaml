@@ -20,7 +20,7 @@ spec:
     method: "git:secret:openshift-gitops/git-creds"
     gitConfig:
       repository: "https://github.com/varshab1210/image-updater-examples.git"
-      branch: "pull-secret"
+      branch: "webhook"
       writeBackTarget: "kustomization:/kustomization-write-target/source"
       pullRequest:
         github: {}

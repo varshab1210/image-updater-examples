@@ -12,7 +12,7 @@ spec:
         runAsNonRoot: true
       containers:
       - name: nginx
-        image: quay.io/varsha/nginx-unprivileged:1.31.0
+        image: quay.io/varsha/nginx-unprivileged:1.31.1
         securityContext:
           allowPrivilegeEscalation: false
           capabilities:
