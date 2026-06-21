@@ -5,3 +5,7 @@ labels:
     includeTemplates: true
     pairs:
       app: kustomization-write-target
+images:
+  - name: quay.io/varsha/nginx-unprivileged
+    newName: quay.io/varsha/nginx-unprivileged
+    newTag: 1.31.1
