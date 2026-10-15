@@ -1,0 +1,6 @@
+apiVersion: v2
+name: hydrator-helm
+description: Minimal chart for GITOPS-11441 sourceHydrator + helmvalues write-back test
+type: application
+version: 0.1.0
+appVersion: "1.0.0"
