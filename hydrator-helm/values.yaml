@@ -1,5 +1,4 @@
 image:
   repository: quay.io/devtools_gitops/guestbook_go
-  tag: "1.0.0"
-
+  tag: "29437546.0"
 replicaCount: 1
